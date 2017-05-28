@@ -1,0 +1,46 @@
+.collection-banner {
+  margin-top: 0vh;
+  margin-bottom: 7vh;
+  color: white;
+  text-align: center;
+  height: 25vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-header-title {
+  text-shadow: 1px 1px 1px;
+}
+
+
+.collection-grid {
+  margin-bottom: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-name {
+  color: $saphir;
+}
+
+.collection-description {
+  font-style: italic;
+}
+
+
+.shoe-link {
+  font-weight: lighter;
+  text-decoration: none;
+  color: black;
+
+}
+
+.shoe-link:hover {
+  color: darkblue;
+  text-shadow: 1px 1px 1px;
+}

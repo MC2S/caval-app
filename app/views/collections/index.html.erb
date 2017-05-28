@@ -1,0 +1,38 @@
+<div class="collection-banner" style="background-image: linear-gradient(-225deg,   rgba(186, 139, 2, 0.5) 0%, rgba(24,24,24,0.2) 50%), url(<%= asset_path('kandisky.jpg') %>);">
+  <div class="collection-header-title">
+    <h2 class="text-center">LA TRIBU #1</h2>
+  </div>
+</div>
+
+<div class="container">
+  </div>
+  <% @collections.each_with_index do |collection, i| %>
+    <div class="row collection-grid">
+      <% if i.even? %>
+      <div class="col-sm-6 col-xs-12">
+        <%= cl_image_tag collection.photo.path, class: "img-responsive" %>
+      </div>
+      <div class="col-sm-6 hidden-xs">
+        <h4 class="collection-name"><%= collection.name %></h4>
+        <p>-</p>
+        <p class="collection-description"><%= collection.description %></p>
+        <%= link_to collection_shoes_path(collection.id) do %>
+          <h4 class="shoe-link">Découvrir ></h4>
+        <% end %>
+      </div>
+      <% else %>
+      <div class="col-sm-6 hidden-xs">
+        <h4 class="collection-name"><%= collection.name %></h4>
+        <p>-</p>
+        <p class="collection-description"><%= collection.description %></p>
+        <%= link_to collection_shoes_path(collection.id) do %>
+          <h4 class="shoe-link">Découvrir ></h4>
+        <% end %>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <%= cl_image_tag collection.photo.path, height: 250, class: "img-responsive" %>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
