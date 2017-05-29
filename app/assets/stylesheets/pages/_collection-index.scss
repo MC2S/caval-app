@@ -1,5 +1,4 @@
 .collection-banner {
-  margin-top: 0vh;
   margin-bottom: 7vh;
   color: white;
   text-align: center;
@@ -9,6 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-attachment: fixed;
+
 }
 
 .collection-header-title {
@@ -17,11 +18,22 @@
 
 
 .collection-grid {
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.collection-image {
+  background: no-repeat center;
+  background-size: 100% auto;
+}
+
+.collection-image:hover {
+  background-image: rgba(0, 250, 5, 0.3);
+  background: no-repeat center;
+  background-size: 100% auto;
 }
 
 .collection-name {

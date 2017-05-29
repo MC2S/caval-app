@@ -10,4 +10,3 @@ class CollectionsController < ApplicationController
     end
 
   end
-end

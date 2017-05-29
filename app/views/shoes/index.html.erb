@@ -1,2 +1,13 @@
-<h1>Shoes#index</h1>
-<p>Find me in app/views/shoes/index.html.erb</p>
+<div class="container navbar-marged">
+  <h2 class="text-center"><%= @collection.name %></h2>
+  <div class="row text-center">
+    <% @shoes.each do |shoe| %>
+      <div class="col-lg-4">
+        <%= cl_image_tag shoe.photos[0].path, class: "img-responsive" %>
+       <h3><%= shoe.name %></h3>
+       <p><%= shoe.description %></p>
+       <h4><%= shoe.price %></h4>
+      </div>
+    <% end %>
+  </div>
+</div>
